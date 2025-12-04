@@ -49,7 +49,7 @@
             "HotHysteresis": [0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
             "Multiplier": 0.001,
             "SendCallback": true,
-            "PollingDelay": 300000,
+            "PollingDelay": 60000,
             "PassiveDelay": 7000,
             "BindedCdevInfo": [
                 {
@@ -71,7 +71,7 @@
             "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.4, 1.9, 1.9],
             "Multiplier":0.001,
             "SendPowerHint":true,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000
         },
         {
@@ -86,7 +86,7 @@
             "HotThreshold":["NAN", 37.0, 39.0, "NAN", "NAN", "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 1.9, 0.0, 0.0, 0.0, 0.0],
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000,
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", 400, "NAN", "NAN", "NAN", "NAN"],
@@ -177,7 +177,7 @@
             "HotThreshold":["NAN", 39.0, 41.0, "NAN", "NAN", "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 1.9, 0.0, 0.0, 0.0, 0.0],
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000,
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", 400, "NAN", "NAN", "NAN", "NAN"],
@@ -286,7 +286,7 @@
             "HotThreshold":["NAN", 39.0, 41.0, "NAN", "NAN", "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 1.9, 0.0, 0.0, 0.0, 0.0],
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000,
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", 1000, "NAN", "NAN", "NAN", "NAN"],
@@ -407,7 +407,7 @@
             "HotThreshold":["NAN", 41.0, 43.0, "NAN", "NAN", "NAN", "NAN"],
             "HotHysteresis":[0.0, 0.0, 1.9, 0.0, 0.0, 0.0, 0.0],
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000,
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", 400, "NAN", "NAN", "NAN", "NAN"],
@@ -512,10 +512,10 @@
             "Formula":"MAXIMUM",
             "Combination":["VIRTUAL-SKIN"],
             "Coefficient":[1.0],
-            "HotThreshold":["NAN", 37.0, 39.0, 41.0, 45.0, 46.5, 52.0],
+            "HotThreshold":["NAN", 40.0, 42.0, 44.0, 48.0, 49.5, 55.0],
             "HotHysteresis":[0.0, 0.0, 1.9, 1.9, 1.9, 1.4, 1.9],
             "Multiplier":0.001,
-            "PollingDelay":300000,
+            "PollingDelay":60000,
             "PassiveDelay":7000,
             "PIDInfo": {
                 "K_Po":["NAN", "NAN", "NAN", "NAN", 300, "NAN", "NAN"],
