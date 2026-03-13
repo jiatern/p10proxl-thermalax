@@ -37,6 +37,12 @@
             "Multiplier":0.001
         },
         {
+            "Name":"BG-TASKS-THROTTLING-EXP-PROPERTY",
+            "Type":"UNKNOWN",
+            "TempPathType": "DEVICE_PROPERTY",
+            "TempPath":"vendor.thermal.bgtasks_experiment_is_running"
+        },
+        {
             "Name": "VIRTUAL-SKIN",
             "Type": "SKIN",
             "Version": "0.1",
@@ -706,6 +712,53 @@
                     "CdevCeiling": [0, 15, 15, 15, 15, 15, 15]
                 }
             ]
+        },
+        {
+            "Name":"IS_CHARGING",
+            "Type":"UNKNOWN",
+            "Hidden":true,
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "Combination":["thb_hda"],
+            "Coefficient":[1],
+            "Multiplier":1
+        },
+        {
+            "Name":"BG_TASKS_THROTTLING_COUNT",
+            "Type":"UNKNOWN",
+            "Hidden":true,
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "Combination":["IS_CHARGING", "BG-TASKS-THROTTLING-EXP-PROPERTY"],
+            "Coefficient":[1, 1],
+            "Multiplier":1
+        },
+        {
+            "Name":"IS_BG_TASKS_THROTTLING_ACTIVE",
+            "Type":"UNKNOWN",
+            "Hidden":true,
+            "VirtualSensor":true,
+            "Formula":"COUNT_THRESHOLD",
+            "Combination":["BG_TASKS_THROTTLING_COUNT"],
+            "Coefficient":[2],
+            "Multiplier":1
+        },
+        {
+            "Name":"BG-TASKS-THROTTLING-HINT",
+            "Type":"UNKNOWN",
+            "Hidden":true,
+            "VirtualSensor":true,
+            "TriggerSensor": ["north_therm", "charging_therm", "disp0_therm"],
+            "Formula":"WEIGHTED_AVG",
+            "Combination":["VIRTUAL-SKIN"],
+            "Coefficient":["IS_BG_TASKS_THROTTLING_ACTIVE"],
+            "CoefficientType": ["SENSOR"],
+            "HotThreshold":[32.0, 35.0, 38.0, 41.0, 46.5, 52.0, 55.0],
+            "HotHysteresis":[0.0, 1.9, 1.9, 1.9, 1.9, 1.9, 1.9],
+            "Multiplier":0.001,
+            "SendPowerHint":true,
+            "PollingDelay":60000,
+            "PassiveDelay":7000
         }
     ],
     "CoolingDevices":[
